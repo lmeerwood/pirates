@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Player.gd" type="Script" id=1]
+[ext_resource path="res://shipsMiscellaneous_sheet.png" type="Texture" id=2]
+
+[node name="KinematicBody2D" type="KinematicBody2D"]
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+rotation = -1.5708
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 408, 115, 66, 113 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+rotation = -1.5708
+polygon = PoolVector2Array( -20.0563, -31.3499, -18.8326, 22.1464, -14.2871, 39.2793, -0.301163, 56.0624, 13.1603, 39.8037, 19.6288, 20.2234, 19.454, -32.0492, 12.2862, -47.2589, -0.126328, -52.8533, -12.8885, -47.0841 )
+
