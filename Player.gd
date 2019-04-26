@@ -26,6 +26,13 @@ func _physics_process(delta):
 			motion = motion.normalized() * MAX_SPEED
 	else: 
 		motion = motion.linear_interpolate(Vector2(0, 0), DEC)
+		
+	if Input.is_action_pressed("ui_select"):
+		var scale_current = get_scale()
+		scale_current = scale_current + Vector2(0.01, 0.01)
+		set_scale(scale_current)
+		$ViewPort.zoom += Vector2(0.005, 0.005)
+		
 	
 	move_and_slide(motion)
 	
